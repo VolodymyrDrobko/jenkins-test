@@ -10,7 +10,6 @@
 
     <properties>
         <suite.xml.location>src\test\java\resources</suite.xml.location>
-        <suite.name>suite-name</suite.name>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
     </properties>
@@ -23,7 +22,7 @@
                 <version>3.0.0-M9</version>
                 <configuration>
                     <suiteXmlFiles>
-                        <suiteXmlFile>${suite.xml.location}\${suite.name}</suiteXmlFile>
+                        <suiteXmlFile>${suite.xml.location}\${suiteName}.xml</suiteXmlFile>
                         <suiteXmlFile>${suite.xml.location}\test_2.xml</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
