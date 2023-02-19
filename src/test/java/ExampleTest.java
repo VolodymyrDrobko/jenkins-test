@@ -4,16 +4,16 @@ public class ExampleTest {
 
     @Test
     public void userNameTest() {
-        System.out.println(System.getenv("username"));
+        System.out.println(System.getenv("User Name"));
     }
 
     @Test
     public void passwordTest() {
-        System.out.println(System.getenv("password"));
+        System.out.println(System.getenv("Password"));
     }
 
     @Test
     public void suiteNameTest() {
-        System.out.println(System.getenv("suite-name"));
+        System.out.println(System.getenv("Suite"));
     }
 }
