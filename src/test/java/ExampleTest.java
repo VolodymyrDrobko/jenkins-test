@@ -14,6 +14,6 @@ public class ExampleTest {
 
     @Test
     public void suiteNameTest() {
-        System.out.println(System.getenv("suiteName"));
+        System.out.println(System.getenv("suite-name"));
     }
 }
