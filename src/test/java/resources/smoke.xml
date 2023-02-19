@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Test-Regression-2">
-    <test name="Regression-2">
+<suite name="Smoke">
+    <test name="Smoke">
         <classes>
             <class name="ExampleTest">
                 <methods>
-                    <include name="suiteNameTest"/>
+                    <include name="userNameTest"/>
+                    <include name="passwordTest"/>
                 </methods>
             </class>
         </classes>

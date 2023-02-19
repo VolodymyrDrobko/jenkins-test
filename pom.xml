@@ -23,7 +23,6 @@
                 <configuration>
                     <suiteXmlFiles>
                         <suiteXmlFile>${suite.xml.location}\${suite-name}.xml</suiteXmlFile>
-                        <suiteXmlFile>${suite.xml.location}\test_2.xml</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>
