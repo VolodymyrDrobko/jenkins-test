@@ -22,7 +22,7 @@
                 <version>3.0.0-M9</version>
                 <configuration>
                     <suiteXmlFiles>
-                        <suiteXmlFile>${suite.xml.location}\${suite.name}</suiteXmlFile>
+                        <suiteXmlFile>${suite.xml.location}\suite-name</suiteXmlFile>
                         <suiteXmlFile>${suite.xml.location}\test_2.xml</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
