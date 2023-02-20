@@ -10,7 +10,7 @@
 
     <properties>
         <suite.xml.location>src\test\java\resources</suite.xml.location>
-<!--        <suite-name>test</suite-name>-->
+        <suite-name>test</suite-name>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
     </properties>
