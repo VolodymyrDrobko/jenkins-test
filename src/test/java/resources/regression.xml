@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Regression">
+<suite name="Regression-suite">
     <test name="Regression">
         <classes>
-            <class name="ExampleTest">
+            <class name="test.ExampleTest">
                 <methods>
                     <include name="userNameTest"/>
                     <include name="passwordTest"/>
