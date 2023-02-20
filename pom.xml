@@ -39,7 +39,6 @@
                     </filesets>
                     <failOnError>true</failOnError>
                     <verbose>true</verbose>
-                    <excludeDefaultDirectories>true</excludeDefaultDirectories>
                 </configuration>
             </plugin>
             <plugin>
