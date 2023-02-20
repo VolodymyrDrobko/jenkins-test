@@ -30,9 +30,16 @@
                             <directory>build</directory>
                         </fileset>
                         <fileset>
-                            <directory>reports</directory>
+                            <directory>reports/</directory>
+                            <includes>
+                                <include>**/*</include>
+                            </includes>
+                            <followSymlinks>true</followSymlinks>
                         </fileset>
                     </filesets>
+                    <failOnError>true</failOnError>
+                    <verbose>true</verbose>
+                    <excludeDefaultDirectories>true</excludeDefaultDirectories>
                 </configuration>
             </plugin>
             <plugin>
