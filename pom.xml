@@ -10,7 +10,7 @@
 
     <properties>
         <suite.xml.location>src\test\java\resources</suite.xml.location>
-        <suite-name>test</suite-name>
+<!--        <suite-name>test</suite-name>-->
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
     </properties>
@@ -29,13 +29,13 @@
                         <fileset>
                             <directory>build</directory>
                         </fileset>
-                        <fileset>
-                            <directory>reports/</directory>
-                            <includes>
-                                <include>**/*</include>
-                            </includes>
-                            <followSymlinks>true</followSymlinks>
-                        </fileset>
+<!--                        <fileset>-->
+<!--                            <directory>reports/</directory>-->
+<!--                            <includes>-->
+<!--                                <include>**/*</include>-->
+<!--                            </includes>-->
+<!--                            <followSymlinks>true</followSymlinks>-->
+<!--                        </fileset>-->
                     </filesets>
                     <failOnError>true</failOnError>
                     <verbose>true</verbose>
