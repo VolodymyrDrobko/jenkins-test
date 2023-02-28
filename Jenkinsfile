@@ -2,17 +2,11 @@ pipeline {
   agent none
         environment {
           userName = "vxd102"
-          password = "default"
-          suite = "test"
+          def password = input message: 'Enter suite', parameters: [password(name: 'password')]
+          def suite = input message: 'Enter suite', parameters: [string(name: 'suite', defaultValue: 'test')]
           pomHome = "C:\\Users\\Volodymyr_Drobko\\IdeaProjects\\jenkins-test\\pom.xml"
         }
-        input {
-            message "Select suite"
-            parameters {
-                    string(defaultValue: 'regression', name: 'suite')
-                    password(defaultValue: 'password', name: 'password')
-                    }
-            }
+
   stages {
     stage('Build') {
     agent any
