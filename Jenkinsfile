@@ -13,7 +13,7 @@ pipeline {
     message "Select suite"
     parameters {
             string(defaultValue: 'regression', name: 'suite')
-            string(defaultValue: 'password', name: 'password')
+            password(defaultValue: 'password', name: 'password')
             }
     }
 
