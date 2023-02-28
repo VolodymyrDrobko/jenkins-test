@@ -7,13 +7,14 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-      bat "mvn clean -f ${pomHome}"
+        bat "mvn clean -f ${pomHome}"
         echo "mvn clean using SUITE: ${env.suite}"
       }
     }
 
     stage('Test') {
       steps {
+        bat "mvn test -Dsuite=${env.suite} -f ${pomHome}"
         echo "test stage"
       }
     }
