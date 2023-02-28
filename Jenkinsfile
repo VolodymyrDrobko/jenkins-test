@@ -1,24 +1,24 @@
 pipeline {
   agent any
+          environment {
+              suite = "test"
+          }
   stages {
     stage('Build') {
-        environment {
-            suite = "test"
-        }
       steps {
-        echo 'build stage - ${suite}'
+        echo "build tests using SUITE: ${suite}"
       }
     }
 
     stage('Test') {
       steps {
-        echo 'test stage'
+        echo "test stage"
       }
     }
 
     stage('Report') {
       steps {
-        echo 'Report stage'
+        echo "Report stage"
       }
     }
 
