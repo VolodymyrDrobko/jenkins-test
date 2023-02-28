@@ -1,8 +1,10 @@
 pipeline {
   agent any
           environment {
-              suite = "test"
-              pomHome = "C:\\Users\\Volodymyr_Drobko\\IdeaProjects\\jenkins-test\\pom.xml"
+            userName = "vxd102"
+            password = ""
+            def suite = input message: 'Enter suite', parameters: [string(name: 'suite', defaultValue: 'test')]
+            pomHome = "C:\\Users\\Volodymyr_Drobko\\IdeaProjects\\jenkins-test\\pom.xml"
           }
   stages {
     stage('Build') {
