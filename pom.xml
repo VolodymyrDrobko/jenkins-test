@@ -10,7 +10,7 @@
 
     <properties>
         <suite.xml.location>src\test\java\resources</suite.xml.location>
-        <suite.name>test</suite.name>
+        <suite>test</suite>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
     </properties>
@@ -47,7 +47,7 @@
                 <version>3.0.0-M9</version>
                 <configuration>
                     <suiteXmlFiles>
-                        <suiteXmlFile>${suite.xml.location}\${suite.name}.xml</suiteXmlFile>
+                        <suiteXmlFile>${suite.xml.location}\${suite}.xml</suiteXmlFile>
                     </suiteXmlFiles>
                     <reportsDirectory>reports</reportsDirectory>
                 </configuration>
