@@ -2,6 +2,9 @@ pipeline {
   agent any
   stages {
     stage('Build') {
+        environment {
+            suite = "test"
+        }
       steps {
         echo 'build stage - ${suite}'
       }
@@ -17,10 +20,6 @@ pipeline {
       steps {
         echo 'Report stage'
       }
-    }
-
-    environment {
-        suite = "test"
     }
 
   }
