@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        echo 'build stage - ${suite-name}'
+        echo 'build stage - ${suite}'
       }
     }
 
@@ -20,7 +20,7 @@ pipeline {
     }
 
     environment {
-        suite-name = "test"
+        suite = "test"
     }
 
   }
