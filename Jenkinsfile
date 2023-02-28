@@ -6,7 +6,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        echo "build tests using SUITE: ${suite}"
+        echo "build tests using SUITE: ${env.suite}"
       }
     }
 
