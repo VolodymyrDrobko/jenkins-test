@@ -1,8 +1,5 @@
 pipeline {
   agent any
-          environment {
-              suite = "test"
-          }
   stages {
     stage('Build') {
       steps {
@@ -12,15 +9,18 @@ pipeline {
 
     stage('Test') {
       steps {
-        echo "test stage"
+        echo 'test stage'
       }
     }
 
     stage('Report') {
       steps {
-        echo "Report stage"
+        echo 'Report stage'
       }
     }
 
+  }
+  environment {
+    suite = 'test'
   }
 }
