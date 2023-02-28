@@ -2,8 +2,8 @@ pipeline {
   agent none
         environment {
           userName = "vxd102"
-          suite
-          password
+          password = "default"
+          suite = "test"
           pomHome = "C:\\Users\\Volodymyr_Drobko\\IdeaProjects\\jenkins-test\\pom.xml"
         }
   stages {
@@ -12,11 +12,11 @@ pipeline {
     input {
     message "Select suite"
     parameters {
-            string(defaultValue: 'regression', name: 'suite')
+            suite = string(defaultValue: 'regression', name: 'suite')
           }
     message "Input password"
               parameters {
-                      string(defaultValue: 'password', name: 'password')
+                      password = string(defaultValue: 'password', name: 'password')
                     }
     }
 
