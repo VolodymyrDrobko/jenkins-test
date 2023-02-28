@@ -12,11 +12,11 @@ pipeline {
     input {
     message "Select suite"
     parameters {
-            string(defaultValue: 'regression', name: 'suite')]
+            string(defaultValue: 'regression', name: 'suite')
           }
     message "Input password"
               parameters {
-                      string(defaultValue: 'password', name: 'password')]
+                      string(defaultValue: 'password', name: 'password')
                     }
     }
 
