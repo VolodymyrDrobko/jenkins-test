@@ -1,13 +1,14 @@
 pipeline {
-  agent any
-          environment {
-            userName = "vxd102"
-            password = ""
-            def suite = input message: 'Enter suite', parameters: [string(name: 'suite', defaultValue: 'test')]
-            pomHome = "C:\\Users\\Volodymyr_Drobko\\IdeaProjects\\jenkins-test\\pom.xml"
-          }
+  agent none
   stages {
     stage('Build') {
+    agent any
+      environment {
+        userName = "vxd102"
+        password = password(name: 'Password', description: "Enter password")
+        suite = input message: 'Enter suite', parameters: [string(name: 'suite', defaultValue: 'regression')]
+        pomHome = "C:\\Users\\Volodymyr_Drobko\\IdeaProjects\\jenkins-test\\pom.xml"
+      }
       steps {
         bat "mvn clean -f ${pomHome}"
         echo "mvn clean using SUITE: ${env.suite}"
@@ -15,6 +16,7 @@ pipeline {
     }
 
     stage('Test') {
+     agent any
       steps {
         bat "mvn test -Dsuite=${env.suite} -f ${pomHome}"
         echo "test stage"
@@ -22,6 +24,7 @@ pipeline {
     }
 
     stage('Report') {
+     agent any
       steps {
         echo "Report stage"
       }
