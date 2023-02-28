@@ -1,12 +1,14 @@
 pipeline {
   agent any
           environment {
-              suite = "test"
+              suite.name = "test"
+              pom.home = "C:\\Users\\Volodymyr_Drobko\\IdeaProjects\\jenkins-test\\pom.xml"
           }
   stages {
     stage('Build') {
       steps {
-        echo "build tests using SUITE: ${env.suite}"
+      bat "mvn clean -f ${pom.home}"
+        echo "mvn clean using SUITE: ${env.suite.name}"
       }
     }
 
