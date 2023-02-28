@@ -6,16 +6,16 @@ pipeline {
           suite = "test"
           pomHome = "C:\\Users\\Volodymyr_Drobko\\IdeaProjects\\jenkins-test\\pom.xml"
         }
+        input {
+            message "Select suite"
+            parameters {
+                    string(defaultValue: 'regression', name: 'suite')
+                    password(defaultValue: 'password', name: 'password')
+                    }
+            }
   stages {
     stage('Build') {
     agent any
-    input {
-    message "Select suite"
-    parameters {
-            string(defaultValue: 'regression', name: 'suite')
-            password(defaultValue: 'password', name: 'password')
-            }
-    }
 
       steps {
         bat "mvn clean -f ${pomHome}"
