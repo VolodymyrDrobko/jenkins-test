@@ -8,12 +8,12 @@ public class ExampleTest extends BaseTest {
 
     @Test
     public void userNameTest() {
-        System.out.println(System.getenv("userName"));
+        System.out.println(System.getenv("APP_CREDENTIALS_USR"));
     }
 
     @Test
     public void passwordTest() {
-        System.out.println(System.getenv("password"));
+        System.out.println(System.getenv("APP_CREDENTIALS_PSW"));
         ReportManager.info("This assertion have to fail");
         Throwable exception = new RuntimeException("A runtime exception");
         ReportManager.fail(exception);
