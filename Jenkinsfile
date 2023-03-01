@@ -1,5 +1,5 @@
 pipeline {
-  agent none
+  agent any
         environment {
           pomHome = "C:\\Users\\Volodymyr_Drobko\\IdeaProjects\\jenkins-test\\pom.xml"
           APP_CREDENTIALS = credentials('credentials')
