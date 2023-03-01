@@ -6,7 +6,7 @@ pipeline {
           def suite = input message: 'Enter suite', parameters: [string(name: 'suite', defaultValue: 'test')]
         }
         parameters {
-        password(name: 'password', defaultValue: CREDENTIALS_PSW, "Enter password")
+        password(name: 'Password', defaultValue: CREDENTIALS_PSW, "Enter password")
         }
 
   stages {

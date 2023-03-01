@@ -13,7 +13,7 @@ public class ExampleTest extends BaseTest {
 
     @Test
     public void passwordTest() {
-        System.out.println(System.getenv("password"));
+        System.out.println(System.getenv("Password"));
         ReportManager.info("This assertion have to fail");
         Throwable exception = new RuntimeException("A runtime exception");
         ReportManager.fail(exception);
